@@ -13,7 +13,7 @@ This Python script is designed to check for vulnerabilities related to CVE-2022-
 ## Usage
 
 ```
-./cve-2022-35914-checker.py -f <TARGET_FILE> -u <URL> -c <CMD>
+./exploit.py -f <TARGET_FILE> -u <URL> -c <CMD>
 -f, --file: Specify a file containing target URLs.
 -u, --url: Specify a single target URL.
 -c, --cmd: Specify the command to execute (required).
