@@ -26,7 +26,7 @@ git clone https://github.com/joelindra/htmlawedchekcer/
 ```
 2. Navigate to the project directory:
 ```
-cd cve-2022-35914-checker
+cd htmlawedchekcer
 ```
 
 ## Dependencies
