@@ -4,19 +4,25 @@ This Python script is designed to check for vulnerabilities related to CVE-2022-
 
 ## Features
 
-- Execute commands on single or multiple target URLs.
-- Check for vulnerabilities related to CVE-2022-35914 in the command output.
-- Color-coded output for easy vulnerability identification.
-- Handle target URLs from a file.
-- Supports customizable command execution and error handling.
+- Execute a specified command on a single URL or multiple URLs.
+- Supports multithreading for faster processing.
+- Customizable retry mechanism for handling request failures.
+- Allows passing custom headers.
+- Simple and clear output: indicates if a target is vulnerable or not.
+- Verbose mode to show detailed information on requests and retries.
 
 ## Usage
 
 ```
-./exploit.py -f <TARGET_FILE> -u <URL> -c <CMD>
--f, --file: Specify a file containing target URLs.
--u, --url: Specify a single target URL.
--c, --cmd: Specify the command to execute (required).
+Options:
+--------
+- `-u`, `--url`: Single target URL.
+- `-f`, `--file`: File containing target URLs.
+- `-c`, `--cmd`: Command to execute (required).
+- `-v`, `--verbose`: Enable verbose output for detailed request information.
+- `--headers`: Custom headers in the format `key:value`.
+- `--retry`: Number of retry attempts if a request fails (default: 1).
+- `--threads`: Number of concurrent threads to use (default: 5).
 ```
 
 ## Installation
