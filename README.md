@@ -4,25 +4,32 @@ This Python script is designed to check for vulnerabilities related to CVE-2022-
 
 ## Features
 
-- Execute a specified command on a single URL or multiple URLs.
-- Supports multithreading for faster processing.
-- Customizable retry mechanism for handling request failures.
-- Allows passing custom headers.
-- Simple and clear output: indicates if a target is vulnerable or not.
-- Verbose mode to show detailed information on requests and retries.
-
+```
+--file: Provides a file with a list of URLs to check.
+--url: Specifies a single URL to check.
+--cmd: Provides a command to run on the target (required).
+--headers: Lets you add custom headers for requests.
+--retry: Sets how many times to retry if a request fails (default: 1).
+--threads: Specifies how many tasks to run in parallel (default: 5).
+--timeout: Sets the time to wait for a response before giving up (default: 10 seconds).
+--verbose: Shows more detailed output.
+```
 ## Usage
 
 ```
-Options:
---------
-- `-u`, `--url`: Single target URL.
-- `-f`, `--file`: File containing target URLs.
-- `-c`, `--cmd`: Command to execute (required).
-- `-v`, `--verbose`: Enable verbose output for detailed request information.
-- `--headers`: Custom headers in the format `key:value`.
-- `--retry`: Number of retry attempts if a request fails (default: 1).
-- `--threads`: Number of concurrent threads to use (default: 5).
+usage: main.py [-h] [-f FILE] [-u URL] [-c CMD] [-v] [--headers HEADERS [HEADERS ...]] [--retry RETRY] [--threads THREADS] [--timeout TIMEOUT]
+
+options:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  File containing target URLs
+  -u URL, --url URL     Single target URL
+  -c CMD, --cmd CMD     Command to execute
+  -v, --verbose         Enable verbose output
+  --headers HEADERS [HEADERS ...]
+                        Custom headers in the format: key:value
+  --retry RETRY         Number of retries if a request fails (default: 1)
+  --threads THREADS     Number of concurrent threads (default: 5)
+  --timeout TIMEOUT     Request timeout in seconds (default: 10)
 ```
 
 ## Installation
