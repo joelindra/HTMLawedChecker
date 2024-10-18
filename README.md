@@ -2,6 +2,9 @@
 
 This Python script is designed to check for vulnerabilities related to CVE-2022-35914. It provides a command-line interface to execute commands on target URLs and analyze the command output to detect potential vulnerabilities associated with CVE-2022-35914.
 
+![image](https://github.com/user-attachments/assets/40cae1c0-6cb1-404c-8e54-f63e7e27585a)
+
+
 ## Features
 
 ```
